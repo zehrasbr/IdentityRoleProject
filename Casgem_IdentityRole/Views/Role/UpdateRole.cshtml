@@ -1,0 +1,16 @@
+﻿@model UpdateRoleViewModel
+@{
+    Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br /><br />
+    <form method="post">
+        <input type="hidden" asp-for="Id" />
+        <label>Rol Adı</label>
+        <input type="text" asp-for="Name" class="form-control" />
+        <br />
+        <button class="btn btn-dark">Rol Güncelle</button>
+    </form>
+</div>

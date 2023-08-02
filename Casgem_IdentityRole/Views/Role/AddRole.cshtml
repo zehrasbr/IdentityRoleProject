@@ -1,0 +1,15 @@
+﻿@model RoleAddViewModel
+@{
+    Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br /><br />
+    <form method="post">
+        <label>Rol Adı</label>
+        <input type="text" asp-for="Name" class="form-control" />
+       <br />
+        <button class="btn btn-dark">Rolü Oluştur</button>
+    </form>
+</div>

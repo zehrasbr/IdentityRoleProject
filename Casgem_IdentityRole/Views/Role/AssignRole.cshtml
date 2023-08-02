@@ -1,0 +1,22 @@
+﻿@model List<RoleAssignViewModel>
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br /><br />
+    <form method="post">
+        <h2>Rol Atama Sayfası</h2>
+        @for(int i = 0; i < Model.Count; i++)
+        {
+            <div class="form-check">
+                <input type="hidden" asp-for="@Model[i].RoleID">
+                <input type="hidden" asp-for="@Model[i].RoleName">
+                <input type="checkbox" asp-for="@Model[i].RoleExist" class="form-check-input">
+                <label class="form-check-label" for="@Model[i].RoleExist">@Model[i].RoleName</label>
+            </div>
+        }
+        <button class="btn btn-dark">Rolleri Güncelle</button>
+        </form>
